@@ -1,0 +1,746 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,600;1,700&display=swap');
+*{
+    /*border: 1px solid yellow;*/
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins";
+}
+
+:root{
+    --white: #fefefe;
+    --blue-lighter: #e3e9f7;
+    --black: #212526;
+    --broun-light: #808000;
+    --green : #478778;
+    --green-light : #4ecca3;
+    --green-263: rgba(57, 161, 196, 0.263);
+    --green-009: rgba(57, 161, 196, 0.09);
+    --grey: #bfc3ca;
+    --orange: #FF5733;
+    --red:#DE3163;
+}
+
+body{
+    background-color: var(--blue-lighter);
+}
+
+/* Style NavBar*/
+img {
+    width: 100%;
+}
+header{
+    width: 80%;
+    height: 70px;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-radius: 0 0 10px 10px;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 120px;
+    margin-top: 8px;
+    margin-left: 16px;
+}
+nav .logo{
+    display: none;
+}
+nav ul{
+    display: flex;
+}
+nav ul li a{
+    color: var(--black);
+    display: block;
+    margin: 0 2px;
+    font-weight: 600;
+    padding: 8px 18px;
+    transition: 0.2s;
+    border-radius: 10px;
+}
+nav ul li:not(.active) a:hover{
+  background: var(--green-263);
+}
+nav ul .active a{
+    background: var(--green);
+    color: var(--white);
+    border-radius: 10px;
+}
+
+.MediaIcon{
+    display: none;
+    height: fit-content;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 10px;
+    transition: 0.2s;
+    border: 2px solid var(--green);
+}
+.MediaIcon:hover{
+    background: var(--green-263);
+}
+.MediaIcon div{
+    width: 30px;
+    height: 2.5px;
+    border-radius: 25px;
+    margin: 6px 0;
+    background: var(--green);
+}
+#nav-icon-check:checked ~ nav{
+    left: 0;
+}
+#nav-icon-check:checked ~ .nav-icon-check label{
+    left: 0;
+}
+#nav-icon-check-close:checked ~ .nav-icon-check label{
+    left: -5000px;
+}
+#nav-icon-check-close:checked ~ nav{
+    left: -300px;
+}
+/* End Style NavBar ===============================*/
+
+/*========================== Style Cards Computers ==========================*/
+.contentComputer{
+    display: flex;
+    align-items: center;
+}
+.content{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 15px;
+    margin:15px 9%;
+    margin-bottom: 100px;
+    align-items: center;
+}
+.titleNewComputer{
+    text-align: center;
+    margin-top: 80px;
+    padding-bottom: 15px;
+    color:var(--white);
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+    font-size: 20px;
+}
+
+.cartglobal{
+    background-color: var(--white);
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.107);
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.107);
+    -moz-box-shadow: 2px 2px 1px 5px rgba(0,0,0,0.107);;
+}
+
+.cartglobal img{
+    border: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
+.cartglobal p{
+    text-align: center;
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: xx-large;
+    font-weight: bold;
+    font-size: 28px;
+    margin-top: 10px;
+}
+.cartglobal p span{
+    color: var(--clr-green-darK);
+    opacity: 0.6;
+}
+
+.ComputerDescription .left{
+    display: flex;
+    float: right;
+    font-weight: 600;
+    color: var(--broun-light);
+}
+.ComputerDescription ul li{
+    font-weight: 700;
+}
+
+.cartglobal .ComputerDescription{
+    padding: 0 20px;
+}
+.ComputerDescription ul li{
+    padding: 0 10px;
+}
+.ComputerDescription ul {
+    padding: 10px 0;
+}
+/* button cards computers for details computer*/
+
+.buttonCard{
+    width: 100%;
+    display: flex;
+    justify-content: right  ;
+}
+.detailButton{
+    /* border: 1px solid red; */
+    display: block;
+    text-align: center;
+    width: fit-content;
+    padding: 4px 10px 4px 18px;
+    margin: 20px 20px 20px 15px;
+    border-radius: 14px ;
+    text-underline-offset: none;
+    /* border: none; */
+    transition: all .3s ease-in-out;
+}
+
+.detailButton a i {
+    padding: 0 5px;
+    transition: transform 0.3s ease-in-out;
+    color: var(--green-light);
+}
+
+.detailButton:hover {
+    background: var(--green);
+    transform: scale(calc(1 + 0.01)) scaleX(1.02) scaleY(1.01);
+    text-decoration: none;
+    color: var(--white);
+}
+
+.detailButton:hover .hr {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.detailButton:hover .buttonIcon{
+    transform: translateX(20%);
+    color:var(--white)
+}
+
+.hr{
+    text-decoration: none;
+    color: var(--green-light);
+    font-weight: 700;
+}
+
+/* Card details computer */
+
+
+
+.detailsCart .ComputerDescription li{
+    list-style: none;    
+}
+
+
+.detailsCart{
+    background-color: rgb(237, 237, 237);
+    border-radius: 10px;
+    width: 580px;
+    min-height: 30vh;
+    margin: auto;
+}
+.detailsCart p{
+    text-align: left;
+    padding-left: 20px;
+}
+/* End Style Cards Computers =================================*/
+
+/*==================== Style Formulaire Create Computer ======================*/
+.createPage{
+    /* border: 1px solid red; */
+    height: calc(100vh - 70px);
+    display: flex;
+    margin-top: -50px;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in-out;
+}
+    .titleCreate{
+    text-align: center;
+    margin: 30px auto;
+    padding-bottom: 25px;
+    color:var(--white);
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+    font-size: 26px;
+}
+.createPage .formCreate{
+    border-radius: 10px;
+    background: var(--white);
+    color: var(--backgroun-white);
+    padding: 20px 25px;
+    margin: 0 20px;
+    box-shadow: 8px 6px 0px 0px var(--grey);
+    -webkit-box-shadow: 8px 6px 0px 0px var(--grey);
+    -moz-box-shadow: 8px 6px 0px 0px var(--grey);
+    transform: scale(1.1);
+}
+.formCreate div{
+    display: flex;
+    /* border: 1px solid red; */
+}
+
+.formCreate div div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.formCreate div div:nth-child(2){
+    margin-left: 50px;
+}
+
+.formCreate  div{
+    justify-content: space-between;
+}
+
+.formCreate div label{
+    color: #9ba2ab;
+    padding: 4px 0;
+    font-weight: 600;
+}
+.formCreate div input{
+    box-sizing: border-box;
+    height:40px;
+    width: fit-content;
+    border: none;
+    border-radius: 5px;
+    outline:none;
+    font-style: italic;
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 0 18px;
+    background: var(--green-009);
+    transition: .3s ease;
+    color: var(--black);
+}
+.formCreate div input[type="date"] {
+    /* Add your CSS styles here */
+    border: 2px solid var(--broun-light);
+    text-decoration: none;
+    font-style: normal;
+    padding: 8px 10px 8px 18px;
+    border-radius: 5px;
+    outline: none;
+}
+/* .formCreate .button{
+    /* border: 1px solid red; */
+    /* justify-content: right; 
+} */
+
+.formCreate .button button{
+    height:40px;
+    padding: 0 20px;
+    margin-top: 20px;
+    color: var(--white);
+    background: var(--clr-green-darK);
+    font-size: 1.1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+.formCreate .button button:hover{
+    box-shadow: inset 0 0 100px rgba(255,255,255,.2);
+  }
+
+.formCreate div input:focus{
+    box-shadow: inset 0 0 3px var(--grey);
+    background: var(--white);
+}
+/* End Style Formulaire Create Computer ================*/
+
+/* =======================Style Error Message =============================*/
+.messagerror{
+    margin: 0;
+    /* border: 1px solid red; */
+}
+.messagerror p{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    max-width: 275px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--red);
+    /* border: 1px solid red; */
+}
+
+.MessageNoComputer{
+    width: 100vw;
+    height: 89vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.MessageNoComputer p{
+    font-size: larger;
+    font-weight: 600;
+}
+.MessageNoComputer img{
+    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+}
+/* End Style Error Message =============================*/
+/* =======================Style Error settings page =============================*/
+
+/*   color variables */
+:root {
+    --clr-primary: #81d4fa;
+    --clr-primary-light: #e1f5fe;
+    --clr-primary-dark: #4fc3f7;
+    --clr-green-darK: #0C9E96;
+    --clr-grey-light: #fff5;
+    --clr-black-shadow: #0005;
+    --clr-white-transparence: #d5f4ff;
+    --clr-green-light: rgb(75 162 193);
+    --clr-gray150: #f4f6fb;
+    --clr-gray200: #eef1f6;
+    --clr-gray300: #e1e5ee;
+    --clr-gray400: #767b91;
+    --clr-gray500: #4f546c;
+    --clr-gray600: #2a324b;
+    --clr-gray700: #161d34;
+  }
+  
+:root {
+    --radius: 0.2rem;
+}
+
+body{
+    background: url('/bg_grey_image.jpg') center/cover;
+    transition: all .5s ease-in-out;
+}
+
+main.table{
+    width: 82vw;
+    height: 80vh;
+    background: var(--clr-grey-light);
+
+    backdrop-filter: blur(7px);
+    box-shadow: 0 0.2rem 0.8rem var(--clr-black-shadow);
+    border-radius: 0.8rem;
+
+    overflow: hidden;
+}
+
+.table__header{
+    width: 100%;
+    height: 10%;
+    background: var(--clr-grey-light);
+    color: var(--white);
+    padding: 17px 0 0 25px;
+}
+
+
+.large {
+	font-size: 1.2rem;
+}
+
+
+.rise {
+	text-shadow: -0.01em -0.01em 0.01em #000;
+	animation: rise 2s ease-in-out 0.5s forwards;
+}
+
+@keyframes rise {
+	to {
+		text-shadow: 0em 0.01em var(--clr-black-shadow), 0em 0.02em var(--clr-black-shadow), 0em 0.02em 0.03em var(--clr-black-shadow),
+			-0.01em 0.01em #333, -0.02em 0.02em #333, -0.03em 0.03em #333,
+			-0.04em 0.04em #333, -0.01em -0.01em 0.03em #000, -0.02em -0.02em 0.03em #000,
+			-0.03em -0.03em 0.03em #000;
+		transform: translateY(-0.025em) translateX(0.04em);
+	}
+}
+
+
+.table__body{
+    width: 97%;
+    max-height: calc(68vh - 1rem);
+    background: var(--clr-white-transparence);
+
+    margin: .8rem auto;
+    border-radius: 0.6rem;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.table__body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table__body::-webkit-scrollbar-thumb{
+    border-radius: 8px; 
+    background-color: var(--clr-gray400);
+    height: 60px;
+    visibility: hidden;
+}
+
+.table__body:hover::-webkit-scrollbar-thumb{ 
+    visibility: visible;
+}
+
+.page__settings{
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+table, th, td{
+    border-collapse: collapse;
+    padding: 1rem;
+}
+
+table{
+    width: 100%;
+}
+
+table thead tr th:first-child{
+    text-align: center;
+}
+table tbody tr td:first-child{
+    text-align: center;
+}
+
+thead tr{
+    position: sticky;
+    top: 0;
+    left: 0;
+    text-align: left;
+    background: var(--clr-green-light);
+    color: var(--blue-lighter);
+}
+
+tbody tr{
+    transition: background-color 0.6s ease;
+}
+
+/* tbody tr:nth-child(even){
+    background-color: var(--clr-green-darK);
+} */
+
+tbody tr{
+    background-color: var(--clr-gray150);
+}
+
+
+tbody tr:hover{
+    background-color: var(--green-009);
+}
+
+.center{
+    text-align: center;
+}
+tbody tr td a, tbody button{
+    justify-content: space-around;
+    text-align: center;
+    padding: 5px 8px 5px 8px;
+    border: none;
+    border-radius: 25%;
+    box-shadow: 0 .05rem .2rem 0 var(--black);
+}
+tbody tr td i{
+    border: none;
+    text-align: center;
+}
+tbody tr td .view{
+    color: var(--black);
+}
+tbody tr td .edit{
+    background: var(--clr-primary-dark);
+    color: var(--white); 
+    margin-left: .7rem;
+}
+tbody tr td .delete{
+    background: var(--red);
+    cursor: pointer;
+    color: var(--white);
+    margin-left: .7rem;
+    padding: 7px 10px 7px 10px;
+}
+
+tbody tr td div{
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+tbody tr td div:hover{
+    transform: scale(1.2) !important;
+}
+
+td img{
+    height: 55px;
+    width: 60px;
+    margin: 0 .5rem;
+    vertical-align: middle;
+}
+  
+
+/* Media Style NavBar*/
+@media only screen and (max-width: 1100px){
+    header{
+        width: 90%;
+        padding: 0 20px;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    nav{
+        position: absolute;
+        left: -300px;
+        top: 0;
+        z-index: 999;
+        width: 280px;
+        height: 100vh;
+        background-color: var(--white);
+        transition: 0.2s;
+        box-shadow: 2px 0 20px 0 rgb(0, 0, 0, 0.20);
+    }
+    nav .logo{
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 70px;
+    }
+    nav ul li a{
+        margin-bottom: 5px;
+        padding: 10px 15px;
+        border-radius: 15px;
+    }
+    nav ul li a:hover{
+        border-radius: 10px;
+    }
+    nav ul {
+        display: block;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+    .nav-icon-check label{
+        position: absolute;
+        top: 0;
+        left: -3000px;
+        width: 100vw;
+        height: 100vh;
+        background: var(--green-263);
+        z-index: 998;
+        /* border: 1px solid red; */
+    }
+    .MediaIcon{
+        display: block;
+    }
+
+} 
+/* End Media Style NavBar ==============================*/
+
+/* Media Style Cards Computers*/
+@media (max-width: 600px) {
+    .content {   
+        margin-top: 50px;
+        grid-gap: 3rem;
+        margin:25px 20%;
+        grid-template-columns: repeat(1, minmax(200px,1fr)); 
+    }
+}
+@media (min-width: 600px) {
+    .content { 
+        grid-gap: 4.3rem;
+        margin:15px 11%;
+        margin-top: 50px;
+        grid-template-columns: repeat(2, minmax(200px,1fr)); 
+    }
+}
+    
+@media (min-width: 900px) {
+    .content {  
+        grid-gap: 2rem;
+        margin:15px 12%;
+        margin-top: 50px;
+        grid-template-columns: repeat(3, minmax(200px,1fr)); 
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .content { 
+        grid-gap: 2rem;
+        margin:15px 10%;
+        margin-top: 50px;
+        grid-template-columns: repeat(4, minmax(200px,1fr)); 
+    }
+}
+
+/* End Media Style Cards Computers ==================================*/
+
+/* Media Style Formulaire create*/
+@media (max-width: 700px) {
+    .createPage {
+        margin-top: -20px;
+    }
+    .createPage .createCard .titleCreate{
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+    .createPage .formCreate {
+        padding: 21px 39px;
+    }
+    .createPage .formCreate {
+        padding: 21px 39px;
+        transform: scale(0.9);
+    }
+    .formCreate div{
+        flex-direction: column;
+        align-items: baseline;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .formCreate div:nth-child(2){
+        margin: 0;
+    }
+    .formCreate div div{
+        width: 100%;
+    }
+
+    .formCreate div div input{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .formCreate div {
+        margin: 8px 5px;
+    }
+    .formCreate .button{
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content:first baseline;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
